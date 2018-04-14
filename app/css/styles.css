@@ -38,19 +38,8 @@ body {
   align-items: center;
   margin: auto;
 }
-
-.container .conteudoCabecalho-texto {
-  position: relative;
-  transform: translateY(82px);
-}
-
 .container .conteudoCabecalho-titulo h2 { 
   margin: 10px 0 30px 0;
-}
-
-.conteudoCabecalho-conteudo {
-  position: absolute;
-  bottom: 100%;
 }
 
 .conteudoCabecalho-conteudo p {
@@ -122,9 +111,9 @@ body {
 
 .heroText {
   font-family: 'Raleway', sans-serif;
-  font-size: 18px;
+  font-size: 1rem;
   color:#636363;
-  margin-bottom: 25px;
+  margin-bottom: 18px;
   font-weight: bold;
 }
 
@@ -140,7 +129,9 @@ body {
   text-align: center;
   margin: 60px 200px 60px 0;
   border-radius: 5px;
-  padding: 15px;
+  padding: 15px; 
+  padding-top: 35px;
+  padding-bottom: 35px;
 }
 
 .hero h2 {
@@ -190,6 +181,7 @@ body {
 .hero #form {
   width: 280px;
   margin-right: 220px;
+
 }
 
 #formText {

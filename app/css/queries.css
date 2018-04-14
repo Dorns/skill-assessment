@@ -6,6 +6,7 @@
 
   .container img{
     margin-top: 25px;
+    max-height: 200px;
   }
 
   .conteudoCabecalho {
@@ -28,14 +29,6 @@
     justify-content: center;
     transform: none;
     padding: 20px;
-  }
-
-  .container .conteudoCabecalho-texto div {
-    order: 1;
-  }
-
-  .container .conteudoCabecalho-texto .conteudoCabecalho-conteudo {
-    order: 0;
   }
 
   .conteudoCabecalho-conteudo p {
