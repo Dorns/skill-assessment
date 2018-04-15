@@ -1,0 +1,64 @@
+.cor-login {
+  background-color: rgba(0, 165, 200, 0.5);
+  border-radius: 10px;
+  
+}
+
+.texto-header {
+  color: #94c13d;
+  font-size: 30px;
+  text-align: center;
+  margin: 50px 80px 50px 80px;
+  font-weight: bold;
+}
+
+.img {
+  max-height: 250px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.texto-help {
+  font-size: 20px;
+  margin: 0 80px 10px 80px;
+  color: #505050;
+}
+
+.texto-corpo {
+  margin: 0 95px 10px 95px;
+  color: #383838;
+}
+
+.texto-vem {
+  color: #00A5C8;
+  font-weight: bold;
+  margin: 0 75px 0 75px;
+  font-size: 20px;
+}
+
+.botao-cadastro { 
+  width: 100px;
+  height: 45px;
+  border-radius: 5px;
+  font-weight: bold;
+  background-color: #94c13d;
+  border: none;
+  border-bottom: 5px solid #8fb648;
+  color: #FFF;
+}
+
+.cor-verde {
+  background-color: #94c13d;
+}
+
+.texto-branco {
+  color: #FFF;
+}
+
+.erroSenha {
+  display: none;
+}
+
+.erroEmail {
+display: none;
+}

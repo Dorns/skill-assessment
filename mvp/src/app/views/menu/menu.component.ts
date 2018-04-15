@@ -12,9 +12,7 @@ export class MenuComponent implements OnInit {
 
   constructor() { }
 
-  mostraFormLogin(e) {
-  //to-do: fazer o js funcionar para mostar o modal
-    // e.preventDefault();
+  mostraFormLogin() {
     $('#exampleModal').modal('show');
   }
 
