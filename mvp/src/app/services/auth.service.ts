@@ -10,7 +10,7 @@ export class AuthService {
   private user: Observable<firebase.User>;
   public userDetails: firebase.User = null;
 
-  curruser: string = '';
+  public curruser: string = '';
 
   constructor(private _firebaseAuth: AngularFireAuth, private router: Router) { 
       this.user = _firebaseAuth.authState;
@@ -19,7 +19,6 @@ export class AuthService {
         (user) => {
           if (user) {
             this.userDetails = user;
-            console.log(this.userDetails);
           }
           else {
             this.userDetails = null;
@@ -66,13 +65,6 @@ export class AuthService {
 
   emailSignUp(email, password) {
     return this._firebaseAuth.auth.createUserWithEmailAndPassword(email, password);
-  }
-
-  getCurrentUser() {
-    return this._firebaseAuth.authState.subscribe(user=>{
-      if(user)
-        return this.curruser = user.email;
-    })
   }
 
   getCurruser():string {

@@ -20,9 +20,7 @@ import { MenuComponent } from './views/menu/menu.component';
 import { RodapeComponent } from './views/rodape/rodape.component';
 import { TesteComponent } from './views/teste/teste.component';
 
-import { UserService } from './services/user.service';
 import { HttpClientModule } from '@angular/common/http';
-import { UserModel } from './services/user.model';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { ThankyouJrComponent } from './views/thankyou/thankyou-jr/thankyou-jr.component';
 import { ThankyouPlComponent } from './views/thankyou/thankyou-pl/thankyou-pl.component';
@@ -51,7 +49,7 @@ import { ThankyouSrComponent } from './views/thankyou/thankyou-sr/thankyou-sr.co
     HttpClientModule,
     AngularFirestoreModule
   ],
-  providers: [AuthService, AuthGuard, UserService],
+  providers: [AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

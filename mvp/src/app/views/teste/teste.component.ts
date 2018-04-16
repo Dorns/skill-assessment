@@ -1,15 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from '../../services/user.service';
 import { AuthService } from '../../services/auth.service';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
-import { UserModel } from '../../services/user.model';
 import { FormsModule } from '@angular/forms';
 import { forEach } from '@angular/router/src/utils/collection';
 import { Router, Params } from '@angular/router';
 import { AngularFirestore } from 'angularfire2/firestore';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../../environments/environment';
+import { AngularFireAuth } from 'angularfire2/auth';
 
 
 @Component({
@@ -21,22 +20,27 @@ import { environment } from '../../../environments/environment';
 
 export class TesteComponent implements OnInit{
 
+  curruser: string = '';
+  junior: Element[];
+  pleno: Element[];
+  senior: Element[];
+
   constructor(
-    public userService: UserService,
     private http: HttpClient,
     private router: Router,
     public db: AngularFirestore,
     private route: ActivatedRoute,
     private location : Location,
-    public authService: AuthService
+    public authService: AuthService,
+    private _firebaseAuth: AngularFireAuth
   ) {
+
+    this._firebaseAuth.authState.subscribe(user=>{
+      if(user)
+        this.curruser = user.email;
+    })
   }
 
-  finalResult;
-  junior: Element[];
-  pleno: Element[];
-  senior: Element[];
-  user: string = '';
   perguntas = 
   [
     {
@@ -133,14 +137,6 @@ export class TesteComponent implements OnInit{
   ];
 
   ngOnInit(): void {
-    this.route.data.subscribe(routeData => {
-      let data = routeData['data'];
-      if (data) {
-        this.user = data;
-        console.log(this.user);
-      }
-    })
-    
   }
 
   pontos() {
@@ -150,7 +146,7 @@ export class TesteComponent implements OnInit{
     let resultado = this.junior.length + (this.pleno.length * 2) + (this.senior.length * 3);
     const req = this.http.post(`${environment.firebase.databaseURL}/resultado.json`, {
       resultado:resultado,
-      user:this.user
+      user: this.curruser
     })
       .subscribe(
         res => {
