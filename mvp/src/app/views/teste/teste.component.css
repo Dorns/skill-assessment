@@ -23,21 +23,13 @@
   color: #ea5c37;
 }
 
-.resposta {
-  
-}
-
-body {
-  padding-top: 20px;
-}
-
 .navbar {
   margin-bottom: 20px;
 }
 
 .main__body {
     background-color: #fafafa;
-    padding-top: 20px;
+    padding-top: 40px;
 }
 
 .login__page {
