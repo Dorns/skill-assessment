@@ -151,9 +151,9 @@ export class TesteComponent implements OnInit{
       .subscribe(
         res => {
           console.log(res);
-          if (resultado >= 0 && resultado <= 15){
+          if (resultado >= 0 && resultado <= 20){
             this.router.navigate(['/thank-you-jr']);
-          }else if (resultado >= 16 && resultado <= 26) {
+          }else if (resultado >= 21 && resultado <= 26) {
             this.router.navigate(['/thank-you-pl']);
           }else{
             this.router.navigate(['/thank-you-sr']);
