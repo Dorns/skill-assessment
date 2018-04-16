@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery'; 
 import 'bootstrap';
-// import * as $ from 'jquery/dist/jquery.min.js';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-menu',
@@ -10,12 +10,8 @@ import 'bootstrap';
 })
 export class MenuComponent implements OnInit {
 
-  constructor() { }
-
-  mostraFormLogin() {
-    $('#exampleModal').modal('show');
-  }
-
+  constructor(private authService: AuthService) { }
+  
   ngOnInit() {
   }
 

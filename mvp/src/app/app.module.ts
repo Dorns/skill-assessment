@@ -17,6 +17,16 @@ import { AuthGuard } from 'app/services/auth-guard.service';
 
 import { FormsModule } from '@angular/forms';
 import { MenuComponent } from './views/menu/menu.component';
+import { RodapeComponent } from './views/rodape/rodape.component';
+import { TesteComponent } from './views/teste/teste.component';
+
+import { UserService } from './services/user.service';
+import { HttpClientModule } from '@angular/common/http';
+import { UserModel } from './services/user.model';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { ThankyouJrComponent } from './views/thankyou/thankyou-jr/thankyou-jr.component';
+import { ThankyouPlComponent } from './views/thankyou/thankyou-pl/thankyou-pl.component';
+import { ThankyouSrComponent } from './views/thankyou/thankyou-sr/thankyou-sr.component';
 
 
 @NgModule({
@@ -24,7 +34,12 @@ import { MenuComponent } from './views/menu/menu.component';
     AppComponent,
     LoginComponent,
     DashboardComponent,
-    MenuComponent
+    MenuComponent,
+    RodapeComponent,
+    TesteComponent,
+    ThankyouJrComponent,
+    ThankyouPlComponent,
+    ThankyouSrComponent
   ],
   imports: [
     BrowserModule,
@@ -32,9 +47,11 @@ import { MenuComponent } from './views/menu/menu.component';
     AngularFireModule.initializeApp(environment.firebase, 'angular-auth-firebase'),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    AngularFirestoreModule
   ],
-  providers: [AuthService, AuthGuard],
+  providers: [AuthService, AuthGuard, UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

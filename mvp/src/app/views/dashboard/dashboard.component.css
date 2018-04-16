@@ -1,0 +1,54 @@
+.cor-fundo {
+  background-color: rgba(0, 165, 200, 0.4);
+}
+
+.cor-azul {
+  color: #00A5C8;
+  font-weight: bold;
+  text-align: center;
+}
+
+.botao-comecar {
+  width: 100px;
+  height: 45px;
+  border-radius: 5px;
+  font-weight: bold;
+  background-color: #ea5c37;
+  border: none;
+  border-bottom: 5px solid #e93d13;
+  color: #FFF;
+}
+
+.alinhamento {
+  text-align: center;
+  height: 100vh; 
+}
+
+.img {
+  max-height: 250px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.junior {
+  font-weight: bold;
+  color: #8eb939;
+}
+
+.pleno {
+  font-weight: bold;
+  color: #00A5C8; 
+}
+
+.senior {
+  font-weight: bold;
+  color: #e93d13;
+}
+
+.texto {
+  font-weight: bold;
+}
+
+.margem {
+  margin-top: 20px;
+}

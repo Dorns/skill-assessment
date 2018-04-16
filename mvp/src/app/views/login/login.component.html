@@ -31,26 +31,7 @@
                     oninvalid="this.setCustomValidity('Favor Inserir Email no formato nome@dominio.exemplo')" required>
                 </div>
                 <div class="form-group">
-                  <input id="emailCheck" type="email" class="form-control" [(ngModel)]="user.emailCheck" name="emailCheck" placeholder="Confirmar Email"
-                    pattern="(.*)+@(.*)+\.(.*)" oninvalid="this.setCustomValidity('Favor Inserir Email no formato nome@dominio.exemplo')"
-                    (change)="emailCheck()" required>
-                </div>
-                <div class="form-group erroEmail">
-                  <span class="form-control alert-danger">
-                    Confirme o Email.
-                  </span>
-                </div>
-                <div class="form-group">
                   <input id="senha" type="password" class="form-control" [(ngModel)]="user.password" name="password" placeholder="Senha" required>
-                </div>
-                <div class="form-group">
-                  <input id="senhaCheck" type="password" class="form-control" [(ngModel)]="user.passwordCheck" name="passwordCheck" placeholder="Confirmar Senha"
-                  (change)="passwordCheck()" required>
-                </div>
-                <div class="form-group erroSenha">
-                  <span class="form-control alert-danger">
-                    Confirme a Senha.
-                  </span>
                 </div>
                 <div class="form-group text-center">
                   <button type="buton" class="btn botao-cadastro" style="margin-bottom: 20px" (click)="signUpWithEmail()" [disabled]="formCadst.form.invalid">
@@ -58,11 +39,15 @@
                   </button>
                 </div>
                 <div class="form-group">
-                  <button type="button" class="btn btn-block" (click)="signInWithTwitter()">
+                  <button type="button" class="btn btn-block botao-fb" (click)="signInWithFacebook()">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                    Login com Facebook
+                  </button>
+                  <button type="button" class="btn btn-block botao-tw" (click)="signInWithTwitter()">
                     <i class="fa fa-twitter" aria-hidden="true"></i>
                     Login com Twitter
                   </button>
-                  <button type="button" class="btn btn-block" (click)="signInWithGoogle()">
+                  <button type="button" class="btn btn-block botao-google" (click)="signInWithGoogle()">
                     <i class="fa fa-google" aria-hidden="true"></i>
                     Login com Google
                   </button>
@@ -76,6 +61,7 @@
     <!-- end card -->
   </div>
   <!-- end container -->
+  <app-rodape></app-rodape>
 </div>
 <div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -84,16 +70,14 @@
         <form name="userform" method="post" #formCtrl="ngForm">
           <h3 align="center">Login</h3>
           <div class="form-group texto-branco">
-            <label for="exampleInputEmail1">Email </label>
             <input type="email" class="form-control" [(ngModel)]="user.email" name="email" placeholder="Email" pattern="(.*)+@(.*)+\.(.*)"
               oninvalid="this.setCustomValidity('Favor Inserir Email no formato nome@dominio.exemplo')" required>
           </div>
           <div class="form-group texto-branco">
-            <label for="exampleInputPassword1">Senha</label>
             <input type="password" class="form-control" [(ngModel)]="user.password" name="password" placeholder="Senha" required>
           </div>
           <div class="form-group text-center">
-            <button type="buton" class="btn botao-cadastro" style="margin-bottom: 20px" (click)="signInWithEmail()" [disabled]="formCtrl.form.invalid">
+            <button type="buton" class="btn botao-login" style="margin-bottom: 20px" (click)="signInWithEmail()" [disabled]="formCtrl.form.invalid">
               Login
             </button>
           </div>

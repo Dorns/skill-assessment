@@ -8,7 +8,9 @@ import { Observable } from 'rxjs/Observable';
 export class AuthService {
 
   private user: Observable<firebase.User>;
-  private userDetails: firebase.User = null;
+  public userDetails: firebase.User = null;
+
+  curruser: string = '';
 
   constructor(private _firebaseAuth: AngularFireAuth, private router: Router) { 
       this.user = _firebaseAuth.authState;
@@ -38,6 +40,12 @@ export class AuthService {
     )
   }
 
+  signInWithFacebook() {
+    return this._firebaseAuth.auth.signInWithPopup(
+      new firebase.auth.FacebookAuthProvider()
+    )
+  }
+
   isLoggedIn() {
     if (this.userDetails == null ) {
         return false;
@@ -58,5 +66,16 @@ export class AuthService {
 
   emailSignUp(email, password) {
     return this._firebaseAuth.auth.createUserWithEmailAndPassword(email, password);
+  }
+
+  getCurrentUser() {
+    return this._firebaseAuth.authState.subscribe(user=>{
+      if(user)
+        return this.curruser = user.email;
+    })
+  }
+
+  getCurruser():string {
+    return this.curruser;
   }
 }

@@ -1,0 +1,21 @@
+<app-menu></app-menu>
+<div class="main__body">
+  <div class="container">
+    <div class="login__page">
+      <img src="assets/img/Socorro_perguntas.png" alt="Socorro" class="img-responsive img-circle img">
+      <form ngNativeValidate (ngSubmit)="pontos()" class="text-center">
+        <div class="container" *ngFor="let pergunta of perguntas">
+          <h2 class="pergunta">{{pergunta.pergunta}} </h2>
+          <label class="radio text-left" *ngFor="let alternativa of pergunta.alternativas">
+            <input required class="" type="radio" [attr.name]="pergunta.pergunta" [value]="alternativa.value" [attr.id]="alternativa.id"
+              [attr.required]="true" [attr.class]="alternativa.class">
+            <span class="radio">{{alternativa.resposta}}</span>
+          </label>
+        </div>
+        <div class="submit text-center">
+          <input type="submit" id="submit" value="Enviar" class="btn btn-success botao-laranja" />
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

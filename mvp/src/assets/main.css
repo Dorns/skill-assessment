@@ -4,7 +4,6 @@
 }
 body {
   padding-top: 20px;
-  padding-bottom: 20px;
 }
 
 .navbar {
@@ -14,8 +13,6 @@ body {
 .main__body {
     background-color: #fafafa;
     padding-top: 20px;
-    font-family: 'Lato', sans-serif;
-
 }
 
 .login__page {

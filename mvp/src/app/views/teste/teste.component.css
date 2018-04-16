@@ -1,0 +1,24 @@
+.botao-laranja {
+  width: 100px;
+  height: 45px;
+  border-radius: 5px;
+  font-weight: bold;
+  background-color: #ea5c37;
+  border: none;
+  border-bottom: 5px solid #e93d13;
+  color: #FFF;
+}
+
+.img {
+  max-height: 250px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.pergunta {
+  color: #ea5c37;
+}
+
+.resposta {
+  
+}

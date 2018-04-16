@@ -1,39 +1,25 @@
-<div class="container">
-
-  <!-- Static navbar -->
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">Angular2AuthFirebase</a>
+<app-menu></app-menu>
+<div class="main__body cor-fundo">
+  <div class="container">
+    <div class="login__page alinhamento align-middle">
+      <div class="card col-md-12 margem">
+        <img src="assets/img/Socorro.png" alt="Socorro" class="img-responsive img-circle img">
       </div>
-      <div id="navbar" class="navbar-collapse collapse">
-        <ul class="nav navbar-nav">
-          <li class="active"><a>Home</a></li>
-          <li><a>About</a></li>
-          <li><a>Contact</a></li>
-        </ul>
-
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="" (click)="authService.logout()">Logout</a></li>
-        </ul>
-        
-      </div><!--/.nav-collapse -->
-    </div><!--/.container-fluid -->
-  </nav>
-
-  <!-- Main component for a primary marketing message or call to action -->
-  <div class="jumbotron">
-    <h1>Welcome to Dashboard</h1>
-    <p>This example is a quick exercise to illustrate how the default, static navbar and fixed to top navbar work. It includes the responsive CSS and HTML, so it also adapts to your viewport and device.</p>
-    <p>
-      <a class="btn btn-lg btn-primary" href="" role="button">Hello</a>
-    </p>
+      <div class="card col-md-12">
+        <h2 class="row cor-azul">Como o teste funciona?</h2>
+        <p class="row texto">O teste contém questões dos mais diversos conteúdos sobre Marketing Digital, cada questão contém um peso, que no
+          final será indicado uma pontuação, medindo a sua senioridade e dependendo de sua pontuação, você será classificado
+          como
+          <span class="junior">Júnior</span>,
+          <span class="pleno"> Pleno</span> ou
+          <span class="senior">Sênior</span>.</p>
+        <h2 class="row cor-azul">E aí, pronto para começar?</h2>
+        <button type="buton" class="btn botao-comecar" style="margin-bottom: 20px" routerLink="/teste">
+          Começar!
+        </button>
+      </div>
+    </div>
+    <!-- end card -->
   </div>
-
-</div> <!-- /container -->
+  <!-- end container -->
+</div>

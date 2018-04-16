@@ -1,17 +1,25 @@
-<nav class="navbar custom-navbar navbar-fixed-top cor" role="navigation">
+<nav class="navbar navbar-default navbar-fixed-top cor">
   <div class="container">
     <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+        aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
       <img src="assets/img/logo_hr_recruta_bco.png" class="img-responsive imagem">
     </div>
-    <ul class="nav navbar-nav navbar-right">
-      <li>
-        <a href="#" class="cor-fonte">Contato</a>
-      </li>
-      <li>
-        <button type="button" class="btn btn-default navbar-btn cor-fonte cor-botao" data-toggle="modal" data-target="#exampleModal"
-          (click)="mostraFormLogin($event)"> Login </button>
-      </li>
-      <!-- implementar o Modal -->
-    </ul>
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-right alinha">
+        <li>
+          <button id="loginButton" type="button" class="btn btn-default navbar-btn cor-fonte cor-botao" data-toggle="modal" data-target="#exampleModal"> Login </button>
+        </li>
+        <li>
+          <button id="logoffButton"type="button" class="btn btn-default navbar-btn cor-fonte cor-botao" (click)="authService.logout()" hidden> Sair </button>
+        </li>
+      </ul>
+    </div>
+    <!--/.nav-collapse -->
   </div>
 </nav>
