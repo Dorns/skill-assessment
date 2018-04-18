@@ -2,6 +2,14 @@
   font-family: 'Raleway', sans-serif;
 }
 
+.margem {
+  margin-top: 60px;
+}
+
+.jr {
+  color: #8eb939;
+}
+
 .espacamento {
   margin-top: 40px;
 }
@@ -9,6 +17,13 @@
 .texto-header {
   color: #94c13d;
   font-size: 30px;
+  margin-top: 60px;
+  font-weight: bold;
+}
+
+.texto-melhorar {
+  color: #94c13d;
+  font-size: 20px;
   margin-top: 60px;
   font-weight: bold;
 }
@@ -21,6 +36,10 @@
 
 .texto {
   font-size: 30px;
+}
+
+.link {
+  font-size: 20px;
 }
 
 body {

@@ -12,19 +12,22 @@ export class AuthService {
 
   public curruser: string = '';
 
-  constructor(private _firebaseAuth: AngularFireAuth, private router: Router) { 
-      this.user = _firebaseAuth.authState;
+  public escondeLogin = 1;
+  public escondeSair = 0;
 
-      this.user.subscribe(
-        (user) => {
-          if (user) {
-            this.userDetails = user;
-          }
-          else {
-            this.userDetails = null;
-          }
+  constructor(private _firebaseAuth: AngularFireAuth, private router: Router) {
+    this.user = _firebaseAuth.authState;
+
+    this.user.subscribe(
+      (user) => {
+        if (user) {
+          this.userDetails = user;
         }
-      );
+        else {
+          this.userDetails = null;
+        }
+      }
+    );
   }
 
   signInWithTwitter() {
@@ -46,28 +49,26 @@ export class AuthService {
   }
 
   isLoggedIn() {
-    if (this.userDetails == null ) {
-        return false;
-      } else {
-        return true;
-      }
+    if (this.userDetails == null) {
+      return false;
+    } else {
+      return true;
+    }
   }
-  
+
   logout() {
-      this._firebaseAuth.auth.signOut()
+    this.escondeLogin = 1;
+    this.escondeSair = 0; 
+    this._firebaseAuth.auth.signOut()
       .then((res) => this.router.navigate(['/']));
   }
 
   signInRegular(email, password) {
-    const credential = firebase.auth.EmailAuthProvider.credential( email, password );
+    const credential = firebase.auth.EmailAuthProvider.credential(email, password);
     return this._firebaseAuth.auth.signInWithEmailAndPassword(email, password)
   }
 
   emailSignUp(email, password) {
     return this._firebaseAuth.auth.createUserWithEmailAndPassword(email, password);
-  }
-
-  getCurruser():string {
-    return this.curruser;
   }
 }

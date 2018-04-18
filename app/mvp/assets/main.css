@@ -1,3 +1,11 @@
 body {
   padding-top: 20px;
 }
+
+.esconde {
+  display: none;
+} 
+
+.exibe {
+  display: block;
+}

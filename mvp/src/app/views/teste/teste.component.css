@@ -43,3 +43,13 @@
     padding: 20px;
     /*margin: 20px 0;*/
 }
+
+.titulo {
+  color: #94c13d;
+  margin-top: 50px;
+}
+
+.conteudo {
+  color: #00a5c8;
+  margin-bottom: 50px;
+}

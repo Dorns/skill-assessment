@@ -45,6 +45,8 @@ export class TesteComponent implements OnInit{
   [
     {
       id: '1',
+      titulo: 'Conteúdo/SEO',
+      conteudo: 'Começaremos falando sobre as principais estratégias do MKT Digital. Analise bem cada opção e responda qual é a mais adequada em cada pergunta.',
       pergunta: 'Qual é a importância do Blog Institucional dentro do SEO?',
       alternativas : [
         { resposta: 'Criar autoridade em motores de busca com conteúdo relevante para o usuário.', value: 3, class:'sr'},
@@ -55,6 +57,8 @@ export class TesteComponent implements OnInit{
     },
     {
       id: '2',
+      titulo: '',
+      conteudo: '',
       pergunta: 'Qual você considera a melhor forma de utilização de keywords dentro de um blogpost?',
       alternativas : [
         { resposta: 'Utilizar no título da página e apenas uma vez no corpo do texto.', value: 2, class:'pl'},
@@ -64,6 +68,8 @@ export class TesteComponent implements OnInit{
     },
     {
       id: '3',
+      titulo: '',
+      conteudo: '',
       pergunta: 'Para que servem o SEO e SEM, respectivamente?',
       alternativas : [
         { resposta: 'Melhorar desempenho em redes sociais e Melhorar rankeamento nos mecanismos de busca.', value: 1, class:'jr'},
@@ -73,6 +79,8 @@ export class TesteComponent implements OnInit{
     },
     {
       id: '4',
+      titulo: '',
+      conteudo: '',
       pergunta: 'Dentre as opções abaixo quais são os canais de aquisições?',
       alternativas : [
         { resposta: 'SEO, SEM e Social Ads.', value: 3, class:'sr'},
@@ -82,6 +90,8 @@ export class TesteComponent implements OnInit{
     },
     {
       id: '5',
+      titulo: 'Ads e Métricas',
+      conteudo: 'Agora queremos saber se você conhece das ferramentas mais utilizadas no MKT Digital e as suas métricas. Vamos lá?',
       pergunta: 'Quais são os objetivos sugeridos pelo Facebook na tela de criação de campanha?',
       alternativas : [
         { resposta: 'Alcance, Consideração e Conversão.', value: 2, class:'pl'},
@@ -91,6 +101,8 @@ export class TesteComponent implements OnInit{
     },
     {
       id: '6',
+      titulo: '',
+      conteudo: '',
       pergunta: 'Se o CPC de uma campanha no google Adwords está alta, quais métricas você avaliaria?',
       alternativas : [
         { resposta: 'CTR, Índice de qualidade, Formato da palavra.', value: 3, class:'sr'},
@@ -100,6 +112,8 @@ export class TesteComponent implements OnInit{
     },
     {
       id: '7',
+      titulo: '',
+      conteudo: '',
       pergunta: 'Qual ferramenta do Google Analitycs permite visualizar o hábito de navegação dos usuários na página?',
       alternativas : [
         { resposta: 'Fluxo de Comportamento.', value: 3, class:'sr'},
@@ -109,6 +123,8 @@ export class TesteComponent implements OnInit{
     },
     {
       id: '8',
+      titulo: 'Growth',
+      conteudo: 'Growth Hacking é um termo que vem ganhando grande destaque no universo do MKT Digital. O quanto você conhece sobre o assunto?',
       pergunta: 'Quais são as etapas principais para o desenvolvimento de um processo de Growth?',
       alternativas : [
         { resposta: 'Ideação, Prototipação, Brainstorming, Testar.', value: 2, class:'pl'},
@@ -118,6 +134,8 @@ export class TesteComponent implements OnInit{
     },
     {
       id: '9',
+      titulo: 'Soft',
+      conteudo: 'Por fim, queremos saber sobre a sua experiência no Mkt Digital.',
       pergunta: 'Em qual etapa do processo de aquisição e conversão está inserido o Growth Hacker?',
       alternativas : [
         { resposta: 'Planejamento, deixando as etapas de execução para equipes operacionais.', value: 1, class:'jr'},
@@ -127,6 +145,8 @@ export class TesteComponent implements OnInit{
     },
     {
       id: '10',
+      titulo: '',
+      conteudo: '',
       pergunta: 'Há quanto tempo você trabalha com Mkt Digital?',
       alternativas : [
         { resposta: 'Até 1 ano.', value: 1, class:'jr'},

@@ -46,3 +46,11 @@ body {
 *{
   font-family: 'Raleway', sans-serif;
 }
+
+.aparece {
+  display: none;
+} 
+
+.some {
+  display: block;
+}

@@ -12,11 +12,11 @@
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav navbar-right alinha">
-        <li>
+        <li [style.visibility]="(authService.escondeLogin == 0) ? 'hidden' : 'visible'">
           <button id="loginButton" type="button" class="btn btn-default navbar-btn cor-fonte cor-botao" data-toggle="modal" data-target="#exampleModal"> Login </button>
         </li>
-        <li>
-          <button id="logoffButton"type="button" class="btn btn-default navbar-btn cor-fonte cor-botao" (click)="authService.logout()" hidden> Sair </button>
+        <li [style.visibility]="(authService.escondeSair == 0) ? 'hidden' : 'visible'">
+          <button id="logoffButton"type="button" class="btn btn-default navbar-btn cor-fonte cor-botao some" (click)="authService.logout()" hidden> Sair </button>
         </li>
       </ul>
     </div>

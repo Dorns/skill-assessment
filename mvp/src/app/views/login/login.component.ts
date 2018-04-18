@@ -19,11 +19,12 @@ export class LoginComponent implements OnInit {
 
   }
 
+  
   signInWithTwitter() {
     this.authService.signInWithTwitter()
       .then((res) => {
-        $('#loginButton').hide();
-        $('#logoffButton').show();
+        this.authService.escondeLogin = 0;
+        this.authService.escondeSair = 1;
         this.router.navigate(['dashboard']);
       })
       .catch((err) => console.log(err));
@@ -32,8 +33,8 @@ export class LoginComponent implements OnInit {
   signInWithGoogle() {
     this.authService.signInWithGoogle()
       .then((res) => {
-        $('#loginButton').hide();
-        $('#logoffButton').show();
+        this.authService.escondeLogin = 0;
+        this.authService.escondeSair = 1;
         this.router.navigate(['dashboard']);
       })
       .catch((err) => console.log(err));
@@ -42,8 +43,8 @@ export class LoginComponent implements OnInit {
   signInWithFacebook() {
     this.authService.signInWithFacebook()
       .then((res) => {
-        $('#loginButton').hide();
-        $('#logoffButton').show();
+        this.authService.escondeLogin = 0;
+        this.authService.escondeSair = 1;
         this.router.navigate(['dashboard']);
       })
       .catch((err) => console.log(err));
@@ -52,9 +53,8 @@ export class LoginComponent implements OnInit {
   signInWithEmail() {
     this.authService.signInRegular(this.user.email, this.user.password)
       .then((res) => {
-        console.log(res);
-        $('#loginButton').hide();
-        $('#logoffButton').show();
+        this.authService.escondeLogin = 0;
+        this.authService.escondeSair = 1;
         this.router.navigate(['dashboard']);
         $('#exampleModal').modal('hide');
       })
@@ -64,9 +64,8 @@ export class LoginComponent implements OnInit {
   signUpWithEmail() {
     this.authService.emailSignUp(this.user.email, this.user.password)
       .then((res) => {
-        console.log(res);
-        $('#loginButton').hide();
-        $('#logoffButton').show();
+        this.authService.escondeLogin = 0;
+        this.authService.escondeSair = 1;
         this.router.navigate(['dashboard']);
       })
       .catch((err) => console.log('error: ' + err));

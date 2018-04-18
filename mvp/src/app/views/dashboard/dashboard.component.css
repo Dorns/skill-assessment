@@ -49,8 +49,12 @@ body {
 }
 
 .alinhamento {
-  text-align: center;
   height: 100vh; 
+}
+
+.texto-socorro {
+  margin-left: 100px;
+  margin-right: 100px;
 }
 
 .img {
@@ -80,4 +84,8 @@ body {
 
 .margem {
   margin-top: 20px;
+}
+
+.alinha {
+  margin-top: 40px;
 }

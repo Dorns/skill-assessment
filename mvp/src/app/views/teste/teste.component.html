@@ -5,7 +5,9 @@
       <img src="assets/img/Socorro_perguntas.png" alt="Socorro" class="img-responsive img-circle img">
       <form ngNativeValidate (ngSubmit)="pontos()" class="text-center">
         <div class="container" *ngFor="let pergunta of perguntas">
-          <h2 class="pergunta">{{pergunta.pergunta}} </h2>
+          <h1 class="titulo">{{pergunta.titulo}}</h1>
+          <h2 class="conteudo">{{pergunta.conteudo}}</h2>
+          <h3 class="pergunta text-left">{{pergunta.pergunta}} </h3>
           <label class="radio text-left" *ngFor="let alternativa of pergunta.alternativas">
             <input required class="" type="radio" [attr.name]="pergunta.pergunta" [value]="alternativa.value" [attr.id]="alternativa.id"
               [attr.required]="true" [attr.class]="alternativa.class">
