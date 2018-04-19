@@ -2,6 +2,10 @@
   font-family: 'Raleway', sans-serif;
 }
 
+.fill {
+  height: 100%;
+}
+
 body {
   padding-top: 20px;
 }
@@ -48,10 +52,6 @@ body {
   color: #FFF;
 }
 
-.alinhamento {
-  height: 100vh; 
-}
-
 .texto-socorro {
   margin-left: 100px;
   margin-right: 100px;
@@ -88,4 +88,14 @@ body {
 
 .alinha {
   margin-top: 40px;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 1023px) {
+  .fill {
+    height: auto;
+  }
+  .texto-socorro {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
 }

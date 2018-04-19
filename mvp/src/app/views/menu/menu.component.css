@@ -20,6 +20,7 @@
 
 body {
   padding-top: 20px;
+  height: 100%;
 }
 
 .navbar {
@@ -29,17 +30,20 @@ body {
 .main__body {
     background-color: #fafafa;
     padding-top: 20px;
+    height: 100%;
 }
 
 .login__page {
     margin-top: 15px;
     padding-bottom: 25px;
     vertical-align: middle;
+    height: 100%;
 }
 
 
 .login__card {
     padding: 20px;
+    height: 100%;
     /*margin: 20px 0;*/
 }
 
