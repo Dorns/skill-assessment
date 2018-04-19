@@ -6,7 +6,9 @@ Pagina Principal - <a href="http://hrtechrecruta.com.br/mvp/"> HRTech Recruta - 
 Exportar arquivos `.csv` e monitorar leads - <a href="http://hrtechrecruta.com.br/export-data.html">Exportar Leads</a>
 
 # Instruções de Build do Projeto
-Baixar o repositório e ter o Angular Cli instalado, abrir o repositorio baixado e utilizar o comando ng serve com o seu console preferido
+Baixar o repositório e ter o Angular Cli instalado, abrir o repositorio baixado e utilizar o comando ng serve com o seu console preferido.
+<br/>
+O Deploy foi feito no GitHub Pages e o dominio utilizado foi comprado no Registro.br.
 
 # Persistencia de dados
 A persistencia de dados do formulário foi feita através do firebase, criando um JSON para armazenamento no banco, com um campo de id para tornar os campos únicos.
