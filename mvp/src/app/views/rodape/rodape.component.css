@@ -1,9 +1,11 @@
 .conteudoRodape {
   background-color: #CCCCCC;
   color: #666666;
-  text-align: center;
-  display: flex;
   justify-content: space-around;
   padding-top: 5px;
   height: 15px;
 }
+
+.alinhamento {
+  padding-left: 25px;
+} 
